@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 02</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Завдання:
+        Напишіть сценарій, який вираховує об'єм циліндра за параметрами, які користувач вводить.
+        Для розрахунку використовуйте формулу V =  * r у квадраті * h.
+        Розмістіть на сторінці два поля введення: перше для радіуса циліндра, друге для висоти циліндра.
+        Об'єм циліндра виведіть у тіло сторінки.
+        */
+        let p1 = document.createElement("p")
+        p1.innerHTML = "Радіус циліндра";
+        let input1 = document.createElement("input");
+        p1.append(input1);
+        let p2 = document.createElement("p");
+        p2.innerHTML = "Висота циліндра";
+        let input2 = document.createElement("input");
+        p2.append(input2);
+        let button = document.createElement("button");
+        button.style.border = "3px solid red";
+        button.style.margin = "10px";
+        button.textContent = "Розрахувати";
+        button.classList = "btn";
+        let p3 = document.createElement("p3");
+        p3.innerHTML = "Розрахувати  об'єм циліндра";
+        let input3 = document.createElement("input")
+        p3.append(button, input3);
+        
+        document.body.append(p1, p2, p3);
+        let btn = document.querySelector(".btn")
+        btn.addEventListener("click", showVolume);
+       
+        function  showVolume() {
+            let h = Number(input2.value);
+            let r = Number(input1.value);
+            let v = Math.PI * r * r * h;
+            input3.value = v;
+            return input3
+        };
+
+       
+           
+
+    </script>
+</body>
+
+</html>
